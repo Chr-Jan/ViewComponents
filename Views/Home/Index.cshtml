@@ -1,0 +1,14 @@
+﻿@model ViewComponents.Models.Human
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <!-- Display the Greeting View Component -->
+    @await Component.InvokeAsync("Greeting", Model)
+
+    <!-- Display other human properties -->
+    <p>Name: @Model.Name</p>
+    <p>Age: @Model.Age</p>
+</div>
